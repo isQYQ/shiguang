@@ -3,9 +3,24 @@ export default {
     component:()=>import('../pages/login/Login/login'),
     children:[
         {
-            //确认登陆信息页
-            path:'confirm',
-            component:()=>import('../pages/login/Confirm/Confirm')
+            //微信登录授权页
+            path:'weixin/confirm',
+            component:()=>import('../pages/login/Weixin-Confirm/weixin-confirm')
+        },
+        {
+            //qq登录授权页
+            path:'qq/confirm',
+            component:()=>import('../pages/login/QQ-Confirm/qq-confirm')
+        },
+        {
+            //邮箱注册页
+            path:'register',
+            component:()=>import('../pages/login/Register/Register')
+        },
+        {
+            //直接登录页
+            path:'direct',
+            component:()=>import('../pages/login/DirectLogin/direct-login')
         }
     ]
 }
